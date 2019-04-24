@@ -19,7 +19,7 @@ there's no need for using additional EF packages as
   - `Microsoft.EntityFrameworkCore.Tools`<br><br>
 If however issues are encountered while eg. adding migrations or updating the database, prompting that any 
 `Microsoft.EntityFrameworkCore` packages are required, using either a cli (dotnet command) or PM - 
-that means the dbcontext or Pomelo nuget package are not set up correctly in most cases. 
+that means the dbcontext or Pomelo nuget package are not set up correctly in most cases. However still in some cases, depending on the versions of the Pomelo EF package and .NET Core SDK, it might be required to add `Microsoft.EntityFrameworkCore.Design`.
 The `Pomelo.EntityFrameworkCore.MySql` nuget package contains all dependencies within itself.
 - You can use add migration, update database etc. (`dotnet` or `PM`) commands the same way as with any EF db provider eg. SQL Server.
 There mostly are no differences in how the object mapping is performed by default EF or Pomelo EF, 
